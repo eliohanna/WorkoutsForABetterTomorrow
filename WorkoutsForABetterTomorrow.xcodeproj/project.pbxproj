@@ -3,29 +3,21 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		19DC93AD26FE3ACB0074CF39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DC93AC26FE3ACB0074CF39 /* AppDelegate.swift */; };
 		19DC93AF26FE3ACB0074CF39 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DC93AE26FE3ACB0074CF39 /* SceneDelegate.swift */; };
-		19DC93B126FE3ACB0074CF39 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DC93B026FE3ACB0074CF39 /* ViewController.swift */; };
 		19DC93B426FE3ACB0074CF39 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19DC93B226FE3ACB0074CF39 /* Main.storyboard */; };
 		19DC93B626FE3ACB0074CF39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19DC93B526FE3ACB0074CF39 /* Assets.xcassets */; };
 		19DC93B926FE3ACB0074CF39 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19DC93B726FE3ACB0074CF39 /* LaunchScreen.storyboard */; };
 		19DC93C426FE3ACB0074CF39 /* WorkoutsForABetterTomorrowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DC93C326FE3ACB0074CF39 /* WorkoutsForABetterTomorrowTests.swift */; };
-		19DC93CF26FE3ACB0074CF39 /* WorkoutsForABetterTomorrowUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DC93CE26FE3ACB0074CF39 /* WorkoutsForABetterTomorrowUITests.swift */; };
+		19DC941E26FE3C090074CF39 /* HealthKitHelper in Frameworks */ = {isa = PBXBuildFile; productRef = 19DC941D26FE3C090074CF39 /* HealthKitHelper */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		19DC93C026FE3ACB0074CF39 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 19DC93A126FE3ACA0074CF39 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 19DC93A826FE3ACB0074CF39;
-			remoteInfo = WorkoutsForABetterTomorrow;
-		};
-		19DC93CB26FE3ACB0074CF39 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 19DC93A126FE3ACA0074CF39 /* Project object */;
 			proxyType = 1;
@@ -38,7 +30,6 @@
 		19DC93A926FE3ACB0074CF39 /* WorkoutsForABetterTomorrow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorkoutsForABetterTomorrow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19DC93AC26FE3ACB0074CF39 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		19DC93AE26FE3ACB0074CF39 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		19DC93B026FE3ACB0074CF39 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		19DC93B326FE3ACB0074CF39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		19DC93B526FE3ACB0074CF39 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		19DC93B826FE3ACB0074CF39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -46,9 +37,7 @@
 		19DC93BF26FE3ACB0074CF39 /* WorkoutsForABetterTomorrowTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WorkoutsForABetterTomorrowTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		19DC93C326FE3ACB0074CF39 /* WorkoutsForABetterTomorrowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutsForABetterTomorrowTests.swift; sourceTree = "<group>"; };
 		19DC93C526FE3ACB0074CF39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		19DC93CA26FE3ACB0074CF39 /* WorkoutsForABetterTomorrowUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WorkoutsForABetterTomorrowUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		19DC93CE26FE3ACB0074CF39 /* WorkoutsForABetterTomorrowUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutsForABetterTomorrowUITests.swift; sourceTree = "<group>"; };
-		19DC93D026FE3ACB0074CF39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		19DC941726FE3BA30074CF39 /* HealthKitHelper */ = {isa = PBXFileReference; lastKnownFileType = folder; name = HealthKitHelper; path = ../HealthKitHelper; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,17 +45,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19DC941E26FE3C090074CF39 /* HealthKitHelper in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		19DC93BC26FE3ACB0074CF39 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		19DC93C726FE3ACB0074CF39 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -79,10 +62,11 @@
 		19DC93A026FE3ACA0074CF39 = {
 			isa = PBXGroup;
 			children = (
+				19DC941726FE3BA30074CF39 /* HealthKitHelper */,
 				19DC93AB26FE3ACB0074CF39 /* WorkoutsForABetterTomorrow */,
 				19DC93C226FE3ACB0074CF39 /* WorkoutsForABetterTomorrowTests */,
-				19DC93CD26FE3ACB0074CF39 /* WorkoutsForABetterTomorrowUITests */,
 				19DC93AA26FE3ACB0074CF39 /* Products */,
+				19DC941C26FE3C090074CF39 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -91,7 +75,6 @@
 			children = (
 				19DC93A926FE3ACB0074CF39 /* WorkoutsForABetterTomorrow.app */,
 				19DC93BF26FE3ACB0074CF39 /* WorkoutsForABetterTomorrowTests.xctest */,
-				19DC93CA26FE3ACB0074CF39 /* WorkoutsForABetterTomorrowUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -99,9 +82,12 @@
 		19DC93AB26FE3ACB0074CF39 /* WorkoutsForABetterTomorrow */ = {
 			isa = PBXGroup;
 			children = (
+				19DC941926FE3BE60074CF39 /* Resources */,
+				19DC941826FE3BDD0074CF39 /* Utils */,
+				19DC941A26FE3BEE0074CF39 /* Models */,
+				19DC941B26FE3BF20074CF39 /* Scenes */,
 				19DC93AC26FE3ACB0074CF39 /* AppDelegate.swift */,
 				19DC93AE26FE3ACB0074CF39 /* SceneDelegate.swift */,
-				19DC93B026FE3ACB0074CF39 /* ViewController.swift */,
 				19DC93B226FE3ACB0074CF39 /* Main.storyboard */,
 				19DC93B526FE3ACB0074CF39 /* Assets.xcassets */,
 				19DC93B726FE3ACB0074CF39 /* LaunchScreen.storyboard */,
@@ -119,13 +105,39 @@
 			path = WorkoutsForABetterTomorrowTests;
 			sourceTree = "<group>";
 		};
-		19DC93CD26FE3ACB0074CF39 /* WorkoutsForABetterTomorrowUITests */ = {
+		19DC941826FE3BDD0074CF39 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				19DC93CE26FE3ACB0074CF39 /* WorkoutsForABetterTomorrowUITests.swift */,
-				19DC93D026FE3ACB0074CF39 /* Info.plist */,
 			);
-			path = WorkoutsForABetterTomorrowUITests;
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		19DC941926FE3BE60074CF39 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		19DC941A26FE3BEE0074CF39 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		19DC941B26FE3BF20074CF39 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		19DC941C26FE3C090074CF39 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,6 +156,9 @@
 			dependencies = (
 			);
 			name = WorkoutsForABetterTomorrow;
+			packageProductDependencies = (
+				19DC941D26FE3C090074CF39 /* HealthKitHelper */,
+			);
 			productName = WorkoutsForABetterTomorrow;
 			productReference = 19DC93A926FE3ACB0074CF39 /* WorkoutsForABetterTomorrow.app */;
 			productType = "com.apple.product-type.application";
@@ -166,24 +181,6 @@
 			productReference = 19DC93BF26FE3ACB0074CF39 /* WorkoutsForABetterTomorrowTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		19DC93C926FE3ACB0074CF39 /* WorkoutsForABetterTomorrowUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 19DC93D926FE3ACB0074CF39 /* Build configuration list for PBXNativeTarget "WorkoutsForABetterTomorrowUITests" */;
-			buildPhases = (
-				19DC93C626FE3ACB0074CF39 /* Sources */,
-				19DC93C726FE3ACB0074CF39 /* Frameworks */,
-				19DC93C826FE3ACB0074CF39 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				19DC93CC26FE3ACB0074CF39 /* PBXTargetDependency */,
-			);
-			name = WorkoutsForABetterTomorrowUITests;
-			productName = WorkoutsForABetterTomorrowUITests;
-			productReference = 19DC93CA26FE3ACB0074CF39 /* WorkoutsForABetterTomorrowUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -197,10 +194,6 @@
 						CreatedOnToolsVersion = 12.5;
 					};
 					19DC93BE26FE3ACB0074CF39 = {
-						CreatedOnToolsVersion = 12.5;
-						TestTargetID = 19DC93A826FE3ACB0074CF39;
-					};
-					19DC93C926FE3ACB0074CF39 = {
 						CreatedOnToolsVersion = 12.5;
 						TestTargetID = 19DC93A826FE3ACB0074CF39;
 					};
@@ -221,7 +214,6 @@
 			targets = (
 				19DC93A826FE3ACB0074CF39 /* WorkoutsForABetterTomorrow */,
 				19DC93BE26FE3ACB0074CF39 /* WorkoutsForABetterTomorrowTests */,
-				19DC93C926FE3ACB0074CF39 /* WorkoutsForABetterTomorrowUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -244,13 +236,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		19DC93C826FE3ACB0074CF39 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -258,7 +243,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				19DC93B126FE3ACB0074CF39 /* ViewController.swift in Sources */,
 				19DC93AD26FE3ACB0074CF39 /* AppDelegate.swift in Sources */,
 				19DC93AF26FE3ACB0074CF39 /* SceneDelegate.swift in Sources */,
 			);
@@ -272,14 +256,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		19DC93C626FE3ACB0074CF39 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				19DC93CF26FE3ACB0074CF39 /* WorkoutsForABetterTomorrowUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -287,11 +263,6 @@
 			isa = PBXTargetDependency;
 			target = 19DC93A826FE3ACB0074CF39 /* WorkoutsForABetterTomorrow */;
 			targetProxy = 19DC93C026FE3ACB0074CF39 /* PBXContainerItemProxy */;
-		};
-		19DC93CC26FE3ACB0074CF39 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 19DC93A826FE3ACB0074CF39 /* WorkoutsForABetterTomorrow */;
-			targetProxy = 19DC93CB26FE3ACB0074CF39 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -437,6 +408,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A58PMS5ZRR;
 				INFOPLIST_FILE = WorkoutsForABetterTomorrow/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -455,6 +427,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A58PMS5ZRR;
 				INFOPLIST_FILE = WorkoutsForABetterTomorrow/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -509,44 +482,6 @@
 			};
 			name = Release;
 		};
-		19DC93DA26FE3ACB0074CF39 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = WorkoutsForABetterTomorrowUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = ElioHanna.WorkoutsForABetterTomorrowUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = WorkoutsForABetterTomorrow;
-			};
-			name = Debug;
-		};
-		19DC93DB26FE3ACB0074CF39 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = WorkoutsForABetterTomorrowUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = ElioHanna.WorkoutsForABetterTomorrowUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = WorkoutsForABetterTomorrow;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -577,16 +512,14 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		19DC93D926FE3ACB0074CF39 /* Build configuration list for PBXNativeTarget "WorkoutsForABetterTomorrowUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				19DC93DA26FE3ACB0074CF39 /* Debug */,
-				19DC93DB26FE3ACB0074CF39 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		19DC941D26FE3C090074CF39 /* HealthKitHelper */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = HealthKitHelper;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 19DC93A126FE3ACA0074CF39 /* Project object */;
 }
