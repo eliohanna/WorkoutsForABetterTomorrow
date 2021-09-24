@@ -62,5 +62,9 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSHealthShareUsageDescription</key>
+	<string>To be able to track your progress, we need access to Health Data.</string>
+	<key>NSHealthUpdateUsageDescription</key>
+	<string>To be able to track your progress, we need access to Health Data.</string>
 </dict>
 </plist>

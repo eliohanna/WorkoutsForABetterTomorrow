@@ -14,6 +14,7 @@
 		19DC93B926FE3ACB0074CF39 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19DC93B726FE3ACB0074CF39 /* LaunchScreen.storyboard */; };
 		19DC93C426FE3ACB0074CF39 /* WorkoutsForABetterTomorrowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DC93C326FE3ACB0074CF39 /* WorkoutsForABetterTomorrowTests.swift */; };
 		19DC941E26FE3C090074CF39 /* HealthKitHelper in Frameworks */ = {isa = PBXBuildFile; productRef = 19DC941D26FE3C090074CF39 /* HealthKitHelper */; };
+		19DC942126FE3DF20074CF39 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19DC942026FE3DF20074CF39 /* HealthKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,8 @@
 		19DC93C326FE3ACB0074CF39 /* WorkoutsForABetterTomorrowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutsForABetterTomorrowTests.swift; sourceTree = "<group>"; };
 		19DC93C526FE3ACB0074CF39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		19DC941726FE3BA30074CF39 /* HealthKitHelper */ = {isa = PBXFileReference; lastKnownFileType = folder; name = HealthKitHelper; path = ../HealthKitHelper; sourceTree = "<group>"; };
+		19DC941F26FE3DF20074CF39 /* WorkoutsForABetterTomorrow.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WorkoutsForABetterTomorrow.entitlements; sourceTree = "<group>"; };
+		19DC942026FE3DF20074CF39 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +49,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				19DC941E26FE3C090074CF39 /* HealthKitHelper in Frameworks */,
+				19DC942126FE3DF20074CF39 /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +86,7 @@
 		19DC93AB26FE3ACB0074CF39 /* WorkoutsForABetterTomorrow */ = {
 			isa = PBXGroup;
 			children = (
+				19DC941F26FE3DF20074CF39 /* WorkoutsForABetterTomorrow.entitlements */,
 				19DC941926FE3BE60074CF39 /* Resources */,
 				19DC941826FE3BDD0074CF39 /* Utils */,
 				19DC941A26FE3BEE0074CF39 /* Models */,
@@ -136,6 +141,7 @@
 		19DC941C26FE3C090074CF39 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				19DC942026FE3DF20074CF39 /* HealthKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -407,6 +413,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = WorkoutsForABetterTomorrow/WorkoutsForABetterTomorrow.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A58PMS5ZRR;
 				INFOPLIST_FILE = WorkoutsForABetterTomorrow/Info.plist;
@@ -426,6 +433,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = WorkoutsForABetterTomorrow/WorkoutsForABetterTomorrow.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A58PMS5ZRR;
 				INFOPLIST_FILE = WorkoutsForABetterTomorrow/Info.plist;
