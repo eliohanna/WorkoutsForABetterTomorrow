@@ -13,6 +13,7 @@ protocol CacheableGoalsUseCase {
 	func get() -> [Goal]?
 }
 
+/// This class was created to abstract the saving, and loading of the goals in CoreData
 class DefaultCacheableGoalsUseCase {
 	private let coreDataService: CoreDataService
 	

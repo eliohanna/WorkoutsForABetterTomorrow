@@ -8,12 +8,14 @@
 import Foundation
 import CoreData
 
+/// This is a simple `CoreDataService` for the purpose of this demo
+/// This could be improved for more powerful customization, but for the sake of demo, a toned down version was created
 class CoreDataService {
 	var persistentContainer: NSPersistentContainer = {
 		let container = NSPersistentContainer(name: "WorkoutsForABetterTomorrow")
 		container.loadPersistentStores(completionHandler: { (storeDescription, error) in
 			if let error = error as NSError? {
-				fatalError("Unresolved error \(error), \(error.userInfo)")
+				assertionFailure("Unresolved error \(error), \(error.userInfo)")
 			}
 		})
 		return container

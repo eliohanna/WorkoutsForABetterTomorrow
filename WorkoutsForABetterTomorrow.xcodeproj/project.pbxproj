@@ -259,7 +259,6 @@
 			isa = PBXGroup;
 			children = (
 				19DC945227004B8F0074CF39 /* CoreDataService */,
-				19DC9447270049E50074CF39 /* NetworkModels */,
 				19DC945027004B770074CF39 /* NetworkService */,
 				19DC945127004B820074CF39 /* GoalsNetworkService */,
 			);
@@ -291,6 +290,7 @@
 		19DC945027004B770074CF39 /* NetworkService */ = {
 			isa = PBXGroup;
 			children = (
+				19DC9447270049E50074CF39 /* NetworkModels */,
 				19DC943C26FFC4EC0074CF39 /* NetworkService.swift */,
 			);
 			path = NetworkService;
