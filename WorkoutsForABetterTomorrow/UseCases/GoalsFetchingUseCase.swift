@@ -18,33 +18,33 @@ protocol GoalsFetchingUseCase {
 class DefaultGoalsFetchingUseCase {
 	// MARK: - private properties
 	private let goalsService: DefaultGoalsNetworkService
-	private let cache = GoalsCache()
-	private let goals = PassthroughSubject<[Goal], Error>()
+	private let cache: CacheableGoalsUseCase
+	private let goalsSubject = PassthroughSubject<[Goal], Error>()
 	private var cancellableSet: Set<AnyCancellable> = Set()
 	
 	// MARK: - init
-	init(baseURL: URL) {
+	init(baseURL: URL, cache: CacheableGoalsUseCase) {
 		goalsService = DefaultGoalsNetworkService(baseURL: baseURL)
+		self.cache = cache
+	}
+	
+	private func goalsFetched(_ goals: [Goal]) {
+		cache.save(goals: goals)
+		goalsSubject.send(goals)
 	}
 }
 
 extension DefaultGoalsFetchingUseCase: GoalsFetchingUseCase {
-	var goalsPublisher: AnyPublisher<[Goal], Error> { goals.eraseToAnyPublisher() }
+	var goalsPublisher: AnyPublisher<[Goal], Error> { goalsSubject.eraseToAnyPublisher() }
 	
 	func performFetch() {
 		if let cachedGoals = cache.get() {
-			goals.send(cachedGoals)
+			goalsSubject.send(cachedGoals)
 		}
 		goalsService.fetchGoals()
-			.sink(receiveCompletion: { [weak self] completion in
-				switch completion {
-				case .failure(let error):
-					self?.goals.send(completion: .failure(error))
-				case .finished:
-					break
-				}
-			}, receiveValue: { [weak self] result in
-				self?.goals.send(result)
+			.replaceError(with: cache.get() ?? [])
+			.sink(receiveValue: { [weak self] result in
+				self?.goalsFetched(result)
 			})
 			.store(in: &cancellableSet)
 	}

@@ -31,7 +31,7 @@ extension Goal {
 		return goalResponse.compactMap({
 			guard let goalType = GoalType(rawValue: $0.type.rawValue),
 				  let goal = Double($0.goal),
-				  let rewardPoints = Double($0.reward.points),
+				  let rewardPoints = Int($0.reward.points),
 				  let goalTrophy = GoalTrophy(rawValue: $0.reward.trophy.rawValue) else { return nil }
 			return .init(id: $0.id,
 						 goal: goal,

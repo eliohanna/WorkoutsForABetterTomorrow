@@ -9,5 +9,5 @@ import Foundation
 
 struct GoalReward {
 	var trophy: GoalTrophy
-	var points: Double
+	var points: Int
 }

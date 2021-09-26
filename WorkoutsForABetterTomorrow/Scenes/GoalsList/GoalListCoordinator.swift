@@ -17,7 +17,8 @@ class GoalListCoordinator {
 	
 	func start() {
 		guard let baseURL = Constants.baseURL else { return }
-		let goalsUseCase = DefaultGoalsFetchingUseCase(baseURL: baseURL)
+		let goalsUseCase = DefaultGoalsFetchingUseCase(baseURL: baseURL,
+													   cache: DefaultCacheableGoalsUseCase(coreDataService: CoreDataService()))
 		let viewModel = GoalsListViewModel(coordinator: self,
 										   goalsFetchingUseCase: goalsUseCase,
 										   healthSummaryUseCase: DefaultHealthSummaryUseCase())

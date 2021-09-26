@@ -31,8 +31,6 @@
 		19DC944B27004A3D0074CF39 /* GoalTypeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DC944A27004A3D0074CF39 /* GoalTypeModel.swift */; };
 		19DC944D27004A5A0074CF39 /* GoalRewardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DC944C27004A5A0074CF39 /* GoalRewardModel.swift */; };
 		19DC944F27004A7F0074CF39 /* GoalTrophyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DC944E27004A7F0074CF39 /* GoalTrophyModel.swift */; };
-		19DC945427004BC00074CF39 /* GoalsCacheable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DC945327004BC00074CF39 /* GoalsCacheable.swift */; };
-		19DC945627004C950074CF39 /* GoalsCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DC945527004C950074CF39 /* GoalsCache.swift */; };
 		19DC94582700505F0074CF39 /* GoalType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DC94572700505F0074CF39 /* GoalType.swift */; };
 		19DC945A270050820074CF39 /* GoalReward.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DC9459270050820074CF39 /* GoalReward.swift */; };
 		19DC945C2700509A0074CF39 /* GoalTrophy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DC945B2700509A0074CF39 /* GoalTrophy.swift */; };
@@ -51,6 +49,11 @@
 		19DC947D2700E07A0074CF39 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DC947C2700E07A0074CF39 /* AppCoordinator.swift */; };
 		19DC947F2700E1830074CF39 /* GoalListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DC947E2700E1830074CF39 /* GoalListCoordinator.swift */; };
 		19DC94812700E5280074CF39 /* GoalDetailsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DC94802700E5280074CF39 /* GoalDetailsCoordinator.swift */; };
+		19DC9487270100900074CF39 /* WorkoutsForABetterTomorrow.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 19DC9485270100900074CF39 /* WorkoutsForABetterTomorrow.xcdatamodeld */; };
+		19DC9489270107180074CF39 /* CacheableGoalsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DC9488270107180074CF39 /* CacheableGoalsUseCase.swift */; };
+		19DC948B2701077C0074CF39 /* CoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DC948A2701077C0074CF39 /* CoreDataService.swift */; };
+		19DC948E27010CD20074CF39 /* Extension+GoalEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DC948D27010CD20074CF39 /* Extension+GoalEntity.swift */; };
+		19DC949027010D870074CF39 /* Extension+RewardEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DC948F27010D870074CF39 /* Extension+RewardEntity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,8 +96,6 @@
 		19DC944A27004A3D0074CF39 /* GoalTypeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalTypeModel.swift; sourceTree = "<group>"; };
 		19DC944C27004A5A0074CF39 /* GoalRewardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalRewardModel.swift; sourceTree = "<group>"; };
 		19DC944E27004A7F0074CF39 /* GoalTrophyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalTrophyModel.swift; sourceTree = "<group>"; };
-		19DC945327004BC00074CF39 /* GoalsCacheable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsCacheable.swift; sourceTree = "<group>"; };
-		19DC945527004C950074CF39 /* GoalsCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsCache.swift; sourceTree = "<group>"; };
 		19DC94572700505F0074CF39 /* GoalType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalType.swift; sourceTree = "<group>"; };
 		19DC9459270050820074CF39 /* GoalReward.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalReward.swift; sourceTree = "<group>"; };
 		19DC945B2700509A0074CF39 /* GoalTrophy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalTrophy.swift; sourceTree = "<group>"; };
@@ -113,6 +114,11 @@
 		19DC947C2700E07A0074CF39 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		19DC947E2700E1830074CF39 /* GoalListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalListCoordinator.swift; sourceTree = "<group>"; };
 		19DC94802700E5280074CF39 /* GoalDetailsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalDetailsCoordinator.swift; sourceTree = "<group>"; };
+		19DC9486270100900074CF39 /* WorkoutsForABetterTomorrow.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WorkoutsForABetterTomorrow.xcdatamodel; sourceTree = "<group>"; };
+		19DC9488270107180074CF39 /* CacheableGoalsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheableGoalsUseCase.swift; sourceTree = "<group>"; };
+		19DC948A2701077C0074CF39 /* CoreDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataService.swift; sourceTree = "<group>"; };
+		19DC948D27010CD20074CF39 /* Extension+GoalEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+GoalEntity.swift"; sourceTree = "<group>"; };
+		19DC948F27010D870074CF39 /* Extension+RewardEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+RewardEntity.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				19DC946C27007C4E0074CF39 /* Constants.swift */,
+				19DC9485270100900074CF39 /* WorkoutsForABetterTomorrow.xcdatamodeld */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -251,7 +258,7 @@
 		19DC943B26FFC4DF0074CF39 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				19DC945227004B8F0074CF39 /* Cacheable */,
+				19DC945227004B8F0074CF39 /* CoreDataService */,
 				19DC9447270049E50074CF39 /* NetworkModels */,
 				19DC945027004B770074CF39 /* NetworkService */,
 				19DC945127004B820074CF39 /* GoalsNetworkService */,
@@ -262,6 +269,7 @@
 		19DC944026FFC99F0074CF39 /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
+				19DC9488270107180074CF39 /* CacheableGoalsUseCase.swift */,
 				19DC944126FFC9B00074CF39 /* GoalsFetchingUseCase.swift */,
 				19DC94782700C4AC0074CF39 /* HealthSummaryUseCase.swift */,
 			);
@@ -297,13 +305,13 @@
 			path = GoalsNetworkService;
 			sourceTree = "<group>";
 		};
-		19DC945227004B8F0074CF39 /* Cacheable */ = {
+		19DC945227004B8F0074CF39 /* CoreDataService */ = {
 			isa = PBXGroup;
 			children = (
-				19DC945327004BC00074CF39 /* GoalsCacheable.swift */,
-				19DC945527004C950074CF39 /* GoalsCache.swift */,
+				19DC948C27010CB60074CF39 /* ModelExtensions */,
+				19DC948A2701077C0074CF39 /* CoreDataService.swift */,
 			);
-			path = Cacheable;
+			path = CoreDataService;
 			sourceTree = "<group>";
 		};
 		19DC9467270073DE0074CF39 /* GoalTableViewCell */ = {
@@ -332,6 +340,15 @@
 				19DC94762700C3750074CF39 /* GoalDetailsView.swift */,
 			);
 			path = GoalDetails;
+			sourceTree = "<group>";
+		};
+		19DC948C27010CB60074CF39 /* ModelExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				19DC948D27010CD20074CF39 /* Extension+GoalEntity.swift */,
+				19DC948F27010D870074CF39 /* Extension+RewardEntity.swift */,
+			);
+			path = ModelExtensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -439,9 +456,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				19DC94442700489E0074CF39 /* GoalsNetworkService.swift in Sources */,
+				19DC949027010D870074CF39 /* Extension+RewardEntity.swift in Sources */,
 				19DC944D27004A5A0074CF39 /* GoalRewardModel.swift in Sources */,
-				19DC945427004BC00074CF39 /* GoalsCacheable.swift in Sources */,
 				19DC93AD26FE3ACB0074CF39 /* AppDelegate.swift in Sources */,
+				19DC948E27010CD20074CF39 /* Extension+GoalEntity.swift in Sources */,
 				19DC945E270056460074CF39 /* Extension+Publisher.swift in Sources */,
 				19DC943626FF8EDB0074CF39 /* GoalsListViewController.swift in Sources */,
 				19DC943A26FFB7060074CF39 /* GoalsListModels.swift in Sources */,
@@ -458,18 +476,20 @@
 				19DC93AF26FE3ACB0074CF39 /* SceneDelegate.swift in Sources */,
 				19DC9449270049F70074CF39 /* GoalModel.swift in Sources */,
 				19DC943026FF8E4E0074CF39 /* Extension+UITableView.swift in Sources */,
+				19DC9487270100900074CF39 /* WorkoutsForABetterTomorrow.xcdatamodeld in Sources */,
 				19DC94772700C3750074CF39 /* GoalDetailsView.swift in Sources */,
 				19DC943826FF8F0B0074CF39 /* GoalsListViewModel.swift in Sources */,
 				19DC947B2700D1FE0074CF39 /* GoalDetailsViewModel.swift in Sources */,
 				19DC947F2700E1830074CF39 /* GoalListCoordinator.swift in Sources */,
 				19DC944226FFC9B00074CF39 /* GoalsFetchingUseCase.swift in Sources */,
 				19DC943226FF8E660074CF39 /* Extension+UIView.swift in Sources */,
+				19DC9489270107180074CF39 /* CacheableGoalsUseCase.swift in Sources */,
 				19DC946A270073F90074CF39 /* GoalTableViewCell.swift in Sources */,
 				19DC943F26FFC8900074CF39 /* Goal.swift in Sources */,
 				19DC947D2700E07A0074CF39 /* AppCoordinator.swift in Sources */,
 				19DC94622700610F0074CF39 /* GoalsResponseModel.swift in Sources */,
-				19DC945627004C950074CF39 /* GoalsCache.swift in Sources */,
 				19DC9446270048D90074CF39 /* DefaultGoalsNetworkService.swift in Sources */,
+				19DC948B2701077C0074CF39 /* CoreDataService.swift in Sources */,
 				19DC94812700E5280074CF39 /* GoalDetailsCoordinator.swift in Sources */,
 				19DC94792700C4AC0074CF39 /* HealthSummaryUseCase.swift in Sources */,
 				19DC943426FF8E770074CF39 /* Extension+Array.swift in Sources */,
@@ -752,6 +772,19 @@
 			productName = HealthKitHelper;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		19DC9485270100900074CF39 /* WorkoutsForABetterTomorrow.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				19DC9486270100900074CF39 /* WorkoutsForABetterTomorrow.xcdatamodel */,
+			);
+			currentVersion = 19DC9486270100900074CF39 /* WorkoutsForABetterTomorrow.xcdatamodel */;
+			path = WorkoutsForABetterTomorrow.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 19DC93A126FE3ACA0074CF39 /* Project object */;
 }
