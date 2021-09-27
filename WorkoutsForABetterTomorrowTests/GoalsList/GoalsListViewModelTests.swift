@@ -7,7 +7,6 @@
 
 import XCTest
 @testable import WorkoutsForABetterTomorrow
-import HealthKitHelper
 import Combine
 
 class GoalsListViewModelTests: XCTestCase {
@@ -26,8 +25,13 @@ class GoalsListViewModelTests: XCTestCase {
 									   healthSummaryUseCase: healthSummaryUseCase!)
 	}
 	
+	func cancel() {
+		cancellableSet.forEach({ $0.cancel() })
+		cancellableSet.removeAll()
+	}
+	
 	override func tearDown() {
-		cancellableSet = Set()
+		cancel()
 		
 		viewModel = nil
 		goalsFetchingUseCase = nil
@@ -39,10 +43,11 @@ class GoalsListViewModelTests: XCTestCase {
 		
 		viewModel?.goalListStatePublisher
 			.receive(on: DispatchQueue.main)
-			.sink(receiveValue: { state in
+			.sink(receiveValue: { [weak self] state in
 				if case .failure(let error) = state,
 				   error.localizedDescription == HealthKitError.notAuthorized.localizedDescription {
 					unauthorizedExpectation.fulfill()
+					self?.cancel()
 				}
 			})
 			.store(in: &cancellableSet)
@@ -52,7 +57,7 @@ class GoalsListViewModelTests: XCTestCase {
 		healthSummaryUseCase?.expectedResult.send(completion: .failure(HealthKitError.notAuthorized))
 		goalsFetchingUseCase?.expectedResult.send([])
 		
-		wait(for: [unauthorizedExpectation], timeout: 0.1)
+		wait(for: [unauthorizedExpectation], timeout: 0.5)
 	}
 	
 	func testStateFetched() {
@@ -63,11 +68,12 @@ class GoalsListViewModelTests: XCTestCase {
 		
 		viewModel?.goalListStatePublisher
 			.receive(on: DispatchQueue.main)
-			.sink(receiveValue: { state in
+			.sink(receiveValue: { [weak self] state in
 				if case .success(let goals) = state {
 					guard goals.map({ $0.goal }) == mockGoals,
 						  goals.first?.currentHealthSummary == healthSummary else { return }
 					goalsExpectation.fulfill()
+					self?.cancel()
 				}
 			})
 			.store(in: &cancellableSet)
@@ -77,7 +83,7 @@ class GoalsListViewModelTests: XCTestCase {
 		healthSummaryUseCase?.expectedResult.send(healthSummary)
 		goalsFetchingUseCase?.expectedResult.send(mockGoals)
 		
-		wait(for: [goalsExpectation], timeout: 0.1)
+		wait(for: [goalsExpectation], timeout: 0.5)
 	}
 	
 	func testGoalsUpdated() {
@@ -89,11 +95,12 @@ class GoalsListViewModelTests: XCTestCase {
 		
 		viewModel?.goalListStatePublisher
 			.receive(on: DispatchQueue.main)
-			.sink(receiveValue: { state in
+			.sink(receiveValue: { [weak self] state in
 				if case .success(let goals) = state {
 					guard goals.map({ $0.goal }) == updatedMockGoals,
 						  goals.first?.currentHealthSummary == healthSummary else { return }
 					goalsExpectation.fulfill()
+					self?.cancel()
 				}
 			})
 			.store(in: &cancellableSet)
@@ -105,7 +112,7 @@ class GoalsListViewModelTests: XCTestCase {
 		
 		goalsFetchingUseCase?.expectedResult.send(updatedMockGoals)
 		
-		wait(for: [goalsExpectation], timeout: 0.1)
+		wait(for: [goalsExpectation], timeout: 0.5)
 	}
 	
 	func testHealthUpdated() {
@@ -117,11 +124,12 @@ class GoalsListViewModelTests: XCTestCase {
 		
 		viewModel?.goalListStatePublisher
 			.receive(on: DispatchQueue.main)
-			.sink(receiveValue: { state in
+			.sink(receiveValue: { [weak self] state in
 				if case .success(let goals) = state {
 					guard goals.map({ $0.goal }) == mockGoals,
 						  goals.first?.currentHealthSummary == updatedHealthSummary else { return }
 					goalsExpectation.fulfill()
+					self?.cancel()
 				}
 			})
 			.store(in: &cancellableSet)
@@ -133,6 +141,6 @@ class GoalsListViewModelTests: XCTestCase {
 		
 		healthSummaryUseCase?.expectedResult.send(updatedHealthSummary)
 		
-		wait(for: [goalsExpectation], timeout: 10)
+		wait(for: [goalsExpectation], timeout: 0.5)
 	}
 }

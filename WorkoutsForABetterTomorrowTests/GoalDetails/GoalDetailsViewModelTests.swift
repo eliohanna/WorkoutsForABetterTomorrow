@@ -7,7 +7,6 @@
 
 import XCTest
 @testable import WorkoutsForABetterTomorrow
-import HealthKitHelper
 import Combine
 
 class GoalDetailsViewModelTests: XCTestCase {
@@ -22,7 +21,14 @@ class GoalDetailsViewModelTests: XCTestCase {
 		viewModel = GoalDetailsViewModel(healthSummaryUseCase: healthSummaryUseCase!, currentGoal: .goal)
 	}
 	
+	func cancel() {
+		cancellableSet.forEach({ $0.cancel() })
+		cancellableSet.removeAll()
+	}
+	
 	override func tearDown() {
+		cancel()
+		
 		viewModel = nil
 		healthSummaryUseCase = nil
 	}
@@ -34,9 +40,10 @@ class GoalDetailsViewModelTests: XCTestCase {
 		
 		viewModel?.$healthSummary
 			.receive(on: DispatchQueue.main)
-			.sink(receiveValue: { healthSummary in
+			.sink(receiveValue: { [weak self] healthSummary in
 				guard healthSummary == mockHealthSummary else { return }
 				summaryExpectation.fulfill()
+				self?.cancel()
 		})
 		.store(in: &cancellableSet)
 		
@@ -44,7 +51,7 @@ class GoalDetailsViewModelTests: XCTestCase {
 		
 		healthSummaryUseCase?.expectedResult.send(mockHealthSummary)
 		
-		wait(for: [summaryExpectation], timeout: 0.1)
+		wait(for: [summaryExpectation], timeout: 0.5)
 	}
 	
 	func testStateUpdated() {
@@ -55,9 +62,10 @@ class GoalDetailsViewModelTests: XCTestCase {
 		
 		viewModel?.$healthSummary
 			.receive(on: DispatchQueue.main)
-			.sink(receiveValue: { healthSummary in
+			.sink(receiveValue: { [weak self] healthSummary in
 				guard healthSummary == updatedMockHealthSummary else { return }
 				summaryExpectation.fulfill()
+				self?.cancel()
 		})
 		.store(in: &cancellableSet)
 		
@@ -66,6 +74,6 @@ class GoalDetailsViewModelTests: XCTestCase {
 		healthSummaryUseCase?.expectedResult.send(mockHealthSummary)
 		healthSummaryUseCase?.expectedResult.send(updatedMockHealthSummary)
 		
-		wait(for: [summaryExpectation], timeout: 0.1)
+		wait(for: [summaryExpectation], timeout: 0.5)
 	}
 }

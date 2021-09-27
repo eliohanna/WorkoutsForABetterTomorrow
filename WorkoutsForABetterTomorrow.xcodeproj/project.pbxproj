@@ -3,16 +3,19 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		19D2D48027015BDD000219A4 /* HealthKitQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D2D47F27015BDD000219A4 /* HealthKitQuery.swift */; };
+		19D2D483270162C6000219A4 /* HealthKitWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D2D482270162C6000219A4 /* HealthKitWorker.swift */; };
+		19D2D48627016690000219A4 /* HealthKitPermissionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D2D48527016690000219A4 /* HealthKitPermissionManager.swift */; };
+		19D2D4892701AF2F000219A4 /* HealthKitError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D2D4882701AF2F000219A4 /* HealthKitError.swift */; };
 		19DC93AD26FE3ACB0074CF39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DC93AC26FE3ACB0074CF39 /* AppDelegate.swift */; };
 		19DC93AF26FE3ACB0074CF39 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DC93AE26FE3ACB0074CF39 /* SceneDelegate.swift */; };
 		19DC93B426FE3ACB0074CF39 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19DC93B226FE3ACB0074CF39 /* Main.storyboard */; };
 		19DC93B626FE3ACB0074CF39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19DC93B526FE3ACB0074CF39 /* Assets.xcassets */; };
 		19DC93B926FE3ACB0074CF39 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19DC93B726FE3ACB0074CF39 /* LaunchScreen.storyboard */; };
-		19DC941E26FE3C090074CF39 /* HealthKitHelper in Frameworks */ = {isa = PBXBuildFile; productRef = 19DC941D26FE3C090074CF39 /* HealthKitHelper */; };
 		19DC942126FE3DF20074CF39 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19DC942026FE3DF20074CF39 /* HealthKit.framework */; };
 		19DC942E26FF8E380074CF39 /* Extension+UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DC942D26FF8E380074CF39 /* Extension+UITableViewCell.swift */; };
 		19DC943026FF8E4E0074CF39 /* Extension+UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DC942F26FF8E4E0074CF39 /* Extension+UITableView.swift */; };
@@ -72,6 +75,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		19D2D47F27015BDD000219A4 /* HealthKitQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitQuery.swift; sourceTree = "<group>"; };
+		19D2D482270162C6000219A4 /* HealthKitWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitWorker.swift; sourceTree = "<group>"; };
+		19D2D48527016690000219A4 /* HealthKitPermissionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitPermissionManager.swift; sourceTree = "<group>"; };
+		19D2D4882701AF2F000219A4 /* HealthKitError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitError.swift; sourceTree = "<group>"; };
 		19DC93A926FE3ACB0074CF39 /* WorkoutsForABetterTomorrow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorkoutsForABetterTomorrow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19DC93AC26FE3ACB0074CF39 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		19DC93AE26FE3ACB0074CF39 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,7 +88,6 @@
 		19DC93BA26FE3ACB0074CF39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		19DC93BF26FE3ACB0074CF39 /* WorkoutsForABetterTomorrowTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WorkoutsForABetterTomorrowTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		19DC93C526FE3ACB0074CF39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		19DC941726FE3BA30074CF39 /* HealthKitHelper */ = {isa = PBXFileReference; lastKnownFileType = folder; path = HealthKitHelper; sourceTree = "<group>"; };
 		19DC941F26FE3DF20074CF39 /* WorkoutsForABetterTomorrow.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WorkoutsForABetterTomorrow.entitlements; sourceTree = "<group>"; };
 		19DC942026FE3DF20074CF39 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		19DC942D26FF8E380074CF39 /* Extension+UITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UITableViewCell.swift"; sourceTree = "<group>"; };
@@ -136,7 +142,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				19DC941E26FE3C090074CF39 /* HealthKitHelper in Frameworks */,
 				19DC942126FE3DF20074CF39 /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -151,10 +156,52 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		19D2D47D27015BBB000219A4 /* HealthKitHelper */ = {
+			isa = PBXGroup;
+			children = (
+				19D2D4872701AF26000219A4 /* HealthKitError */,
+				19D2D48427016662000219A4 /* HealthKitPermissionManager */,
+				19D2D47E27015BCF000219A4 /* HealthKitQuery */,
+				19D2D481270162BA000219A4 /* HealthKitWorker */,
+			);
+			path = HealthKitHelper;
+			sourceTree = "<group>";
+		};
+		19D2D47E27015BCF000219A4 /* HealthKitQuery */ = {
+			isa = PBXGroup;
+			children = (
+				19D2D47F27015BDD000219A4 /* HealthKitQuery.swift */,
+			);
+			path = HealthKitQuery;
+			sourceTree = "<group>";
+		};
+		19D2D481270162BA000219A4 /* HealthKitWorker */ = {
+			isa = PBXGroup;
+			children = (
+				19D2D482270162C6000219A4 /* HealthKitWorker.swift */,
+			);
+			path = HealthKitWorker;
+			sourceTree = "<group>";
+		};
+		19D2D48427016662000219A4 /* HealthKitPermissionManager */ = {
+			isa = PBXGroup;
+			children = (
+				19D2D48527016690000219A4 /* HealthKitPermissionManager.swift */,
+			);
+			path = HealthKitPermissionManager;
+			sourceTree = "<group>";
+		};
+		19D2D4872701AF26000219A4 /* HealthKitError */ = {
+			isa = PBXGroup;
+			children = (
+				19D2D4882701AF2F000219A4 /* HealthKitError.swift */,
+			);
+			path = HealthKitError;
+			sourceTree = "<group>";
+		};
 		19DC93A026FE3ACA0074CF39 = {
 			isa = PBXGroup;
 			children = (
-				19DC941726FE3BA30074CF39 /* HealthKitHelper */,
 				19DC93AB26FE3ACB0074CF39 /* WorkoutsForABetterTomorrow */,
 				19DC93C226FE3ACB0074CF39 /* WorkoutsForABetterTomorrowTests */,
 				19DC93AA26FE3ACB0074CF39 /* Products */,
@@ -174,6 +221,7 @@
 		19DC93AB26FE3ACB0074CF39 /* WorkoutsForABetterTomorrow */ = {
 			isa = PBXGroup;
 			children = (
+				19D2D47D27015BBB000219A4 /* HealthKitHelper */,
 				19DC941F26FE3DF20074CF39 /* WorkoutsForABetterTomorrow.entitlements */,
 				19DC9472270095800074CF39 /* CommonViews */,
 				19DC943B26FFC4DF0074CF39 /* Services */,
@@ -415,7 +463,6 @@
 			);
 			name = WorkoutsForABetterTomorrow;
 			packageProductDependencies = (
-				19DC941D26FE3C090074CF39 /* HealthKitHelper */,
 			);
 			productName = WorkoutsForABetterTomorrow;
 			productReference = 19DC93A926FE3ACB0074CF39 /* WorkoutsForABetterTomorrow.app */;
@@ -506,6 +553,7 @@
 				19DC94442700489E0074CF39 /* GoalsNetworkService.swift in Sources */,
 				19DC949027010D870074CF39 /* Extension+RewardEntity.swift in Sources */,
 				19DC944D27004A5A0074CF39 /* GoalRewardModel.swift in Sources */,
+				19D2D4892701AF2F000219A4 /* HealthKitError.swift in Sources */,
 				19DC93AD26FE3ACB0074CF39 /* AppDelegate.swift in Sources */,
 				19DC948E27010CD20074CF39 /* Extension+GoalEntity.swift in Sources */,
 				19DC945E270056460074CF39 /* Extension+Publisher.swift in Sources */,
@@ -515,6 +563,7 @@
 				19DC944B27004A3D0074CF39 /* GoalTypeModel.swift in Sources */,
 				19DC942E26FF8E380074CF39 /* Extension+UITableViewCell.swift in Sources */,
 				19DC943D26FFC4EC0074CF39 /* NetworkService.swift in Sources */,
+				19D2D483270162C6000219A4 /* HealthKitWorker.swift in Sources */,
 				19DC946F27007D850074CF39 /* Extension+UIViewController.swift in Sources */,
 				19DC945A270050820074CF39 /* GoalReward.swift in Sources */,
 				19DC946D27007C4E0074CF39 /* Constants.swift in Sources */,
@@ -524,6 +573,7 @@
 				19DC93AF26FE3ACB0074CF39 /* SceneDelegate.swift in Sources */,
 				19DC9449270049F70074CF39 /* GoalModel.swift in Sources */,
 				19DC943026FF8E4E0074CF39 /* Extension+UITableView.swift in Sources */,
+				19D2D48627016690000219A4 /* HealthKitPermissionManager.swift in Sources */,
 				19DC9487270100900074CF39 /* WorkoutsForABetterTomorrow.xcdatamodeld in Sources */,
 				19DC94772700C3750074CF39 /* GoalDetailsView.swift in Sources */,
 				19DC943826FF8F0B0074CF39 /* GoalsListViewModel.swift in Sources */,
@@ -534,6 +584,7 @@
 				19DC9489270107180074CF39 /* CacheableGoalsUseCase.swift in Sources */,
 				19DC946A270073F90074CF39 /* GoalTableViewCell.swift in Sources */,
 				19DC943F26FFC8900074CF39 /* Goal.swift in Sources */,
+				19D2D48027015BDD000219A4 /* HealthKitQuery.swift in Sources */,
 				19DC947D2700E07A0074CF39 /* AppCoordinator.swift in Sources */,
 				19DC94622700610F0074CF39 /* GoalsResponseModel.swift in Sources */,
 				19DC9446270048D90074CF39 /* DefaultGoalsNetworkService.swift in Sources */,
@@ -821,13 +872,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		19DC941D26FE3C090074CF39 /* HealthKitHelper */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = HealthKitHelper;
-		};
-/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		19DC9485270100900074CF39 /* WorkoutsForABetterTomorrow.xcdatamodeld */ = {

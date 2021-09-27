@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import HealthKitHelper
 import Combine
 
 protocol HealthSummaryUseCase {
@@ -40,9 +39,9 @@ class DefaultHealthSummaryUseCase {
 								  walkingDistanceWorker.summaryPublisher,
 								  runningDistanceWorker.summaryPublisher)
 			.map({ (stepSummary, walkingSummary, runningSummary) in
-				return GoalsListHealthSummary(steps: stepSummary.value,
-											  walkingDistance: walkingSummary.value,
-											  runningDistance: runningSummary.value)
+				return GoalsListHealthSummary(steps: stepSummary,
+											  walkingDistance: walkingSummary,
+											  runningDistance: runningSummary)
 			})
 			.assign(to: healthSummarySubject)
 			.store(in: &cancellableSet)
