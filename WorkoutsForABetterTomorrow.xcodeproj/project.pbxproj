@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		19AF2CD92701BBD000C27824 /* GoalEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AF2CD82701BBD000C27824 /* GoalEncoder.swift */; };
+		19AF2CDB2701BBFB00C27824 /* RewardEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AF2CDA2701BBFB00C27824 /* RewardEncoder.swift */; };
+		19AF2CDE2701BED700C27824 /* GoalDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AF2CDD2701BED700C27824 /* GoalDecoder.swift */; };
+		19AF2CE02701BF8100C27824 /* RewardDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AF2CDF2701BF8100C27824 /* RewardDecoder.swift */; };
 		19D2D48027015BDD000219A4 /* HealthKitQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D2D47F27015BDD000219A4 /* HealthKitQuery.swift */; };
 		19D2D483270162C6000219A4 /* HealthKitWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D2D482270162C6000219A4 /* HealthKitWorker.swift */; };
 		19D2D48627016690000219A4 /* HealthKitPermissionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D2D48527016690000219A4 /* HealthKitPermissionManager.swift */; };
@@ -75,6 +79,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		19AF2CD82701BBD000C27824 /* GoalEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalEncoder.swift; sourceTree = "<group>"; };
+		19AF2CDA2701BBFB00C27824 /* RewardEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardEncoder.swift; sourceTree = "<group>"; };
+		19AF2CDD2701BED700C27824 /* GoalDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalDecoder.swift; sourceTree = "<group>"; };
+		19AF2CDF2701BF8100C27824 /* RewardDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardDecoder.swift; sourceTree = "<group>"; };
 		19D2D47F27015BDD000219A4 /* HealthKitQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitQuery.swift; sourceTree = "<group>"; };
 		19D2D482270162C6000219A4 /* HealthKitWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitWorker.swift; sourceTree = "<group>"; };
 		19D2D48527016690000219A4 /* HealthKitPermissionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitPermissionManager.swift; sourceTree = "<group>"; };
@@ -156,6 +164,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		19AF2CD72701BBBB00C27824 /* Encoders */ = {
+			isa = PBXGroup;
+			children = (
+				19AF2CD82701BBD000C27824 /* GoalEncoder.swift */,
+				19AF2CDA2701BBFB00C27824 /* RewardEncoder.swift */,
+			);
+			path = Encoders;
+			sourceTree = "<group>";
+		};
+		19AF2CDC2701BC8D00C27824 /* Decoders */ = {
+			isa = PBXGroup;
+			children = (
+				19AF2CDD2701BED700C27824 /* GoalDecoder.swift */,
+				19AF2CDF2701BF8100C27824 /* RewardDecoder.swift */,
+			);
+			path = Decoders;
+			sourceTree = "<group>";
+		};
 		19D2D47D27015BBB000219A4 /* HealthKitHelper */ = {
 			isa = PBXGroup;
 			children = (
@@ -368,6 +394,8 @@
 		19DC945227004B8F0074CF39 /* CoreDataService */ = {
 			isa = PBXGroup;
 			children = (
+				19AF2CD72701BBBB00C27824 /* Encoders */,
+				19AF2CDC2701BC8D00C27824 /* Decoders */,
 				19DC948C27010CB60074CF39 /* ModelExtensions */,
 				19DC948A2701077C0074CF39 /* CoreDataService.swift */,
 			);
@@ -552,8 +580,10 @@
 			files = (
 				19DC94442700489E0074CF39 /* GoalsNetworkService.swift in Sources */,
 				19DC949027010D870074CF39 /* Extension+RewardEntity.swift in Sources */,
+				19AF2CD92701BBD000C27824 /* GoalEncoder.swift in Sources */,
 				19DC944D27004A5A0074CF39 /* GoalRewardModel.swift in Sources */,
 				19D2D4892701AF2F000219A4 /* HealthKitError.swift in Sources */,
+				19AF2CDB2701BBFB00C27824 /* RewardEncoder.swift in Sources */,
 				19DC93AD26FE3ACB0074CF39 /* AppDelegate.swift in Sources */,
 				19DC948E27010CD20074CF39 /* Extension+GoalEntity.swift in Sources */,
 				19DC945E270056460074CF39 /* Extension+Publisher.swift in Sources */,
@@ -589,7 +619,9 @@
 				19DC94622700610F0074CF39 /* GoalsResponseModel.swift in Sources */,
 				19DC9446270048D90074CF39 /* DefaultGoalsNetworkService.swift in Sources */,
 				19DC948B2701077C0074CF39 /* CoreDataService.swift in Sources */,
+				19AF2CE02701BF8100C27824 /* RewardDecoder.swift in Sources */,
 				19DC94812700E5280074CF39 /* GoalDetailsCoordinator.swift in Sources */,
+				19AF2CDE2701BED700C27824 /* GoalDecoder.swift in Sources */,
 				19DC94792700C4AC0074CF39 /* HealthSummaryUseCase.swift in Sources */,
 				19DC943426FF8E770074CF39 /* Extension+Array.swift in Sources */,
 				19DC9464270069AC0074CF39 /* Extension+String.swift in Sources */,

@@ -11,15 +11,10 @@ import CoreData
 extension RewardEntity {
 	convenience init(context: NSManagedObjectContext, reward: GoalReward) {
 		self.init(context: context)
-		
-		points = Int32(reward.points)
-		trophy = reward.trophy.rawValue
+		RewardEncoder().encode(reward: reward, into: self)
 	}
 	
 	func toGoalReward() -> GoalReward? {
-		guard let goalTrophy = GoalTrophy(rawValue: trophy ?? "") else { return nil }
-		
-		return .init(trophy: goalTrophy,
-					 points: Int(points))
+		return RewardDecoder().decode(rewardEntity: self)
 	}
 }

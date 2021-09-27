@@ -37,7 +37,7 @@ extension HealthKitQuery {
 
 /// This  class is a wrapper around Apple's `HKStatisticsQuery`
 /// It handles the creation of the query, as well as the result
-/// Two special cases are handled here, `HKError.Code.errorNoData` and `HKError.Code.noError]`, for us these are not errors, but rather a value of 0
+/// Two special cases are handled here, `HKError.Code.errorNoData` and `HKError.Code.noError`, for us these are not errors, but rather a value of 0
 class HealthKitQuery {
 	let startDate: Date
 	let endDate: Date

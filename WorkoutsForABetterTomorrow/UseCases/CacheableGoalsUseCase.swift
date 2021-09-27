@@ -30,7 +30,7 @@ extension DefaultCacheableGoalsUseCase: CacheableGoalsUseCase {
 	func save(goals: [Goal]) {
 		deleteAllGoals()
 		let context = coreDataService.persistentContainer.viewContext
-		let _ = goals.map({ GoalEntity(context: context, goal: $0) })
+		_ = goals.map({ GoalEntity(context: context, goal: $0) })
 		
 		coreDataService.saveContext()
 	}
