@@ -25,7 +25,7 @@ class GoalsListViewModel {
 	private var coordinator: GoalListCoordinator?
 	
 	// MARK: - init
-	init(coordinator: GoalListCoordinator, goalsFetchingUseCase: GoalsFetchingUseCase, healthSummaryUseCase: HealthSummaryUseCase) {
+	init(coordinator: GoalListCoordinator?, goalsFetchingUseCase: GoalsFetchingUseCase, healthSummaryUseCase: HealthSummaryUseCase) {
 		self.coordinator = coordinator
 		self.goalsFetchingUseCase = goalsFetchingUseCase
 		self.healthSummaryUseCase = healthSummaryUseCase
@@ -61,14 +61,17 @@ class GoalsListViewModel {
 	/// - tries to map the result of combination into `GoalsListState`
 	/// - sinks the value to `goalListStateSubject`
 	private func setupPublishers() {
-		Publishers.CombineLatest(healthSummaryUseCase.goalSummaryPublisher, goalsFetchingUseCase.goalsPublisher)
+		Publishers.CombineLatest(healthSummaryUseCase.healthSummaryPublisher, goalsFetchingUseCase.goalsPublisher)
 			.tryMap({ [weak self] (summary, goals) -> GoalsListState in
-				guard let summary = summary else { return GoalsListState.unauthorized }
+				guard let summary = summary else { return GoalsListState.failure(HealthKitError.notAuthorized) }
 				let viewModels = self?.getViewModels(for: goals, summary: summary) ?? []
 				return GoalsListState.success(goals: viewModels)
 			})
-			.replaceError(with: .noResults)
-			.sink(receiveValue: { [weak self] state in
+			.sink(receiveCompletion: { [weak self] completion in
+				if case .failure(let error) = completion {
+					self?.goalListStateSubject.send(.failure(error))
+				}
+			}, receiveValue: { [weak self] state in
 				self?.goalListStateSubject.send(state)
 			})
 			.store(in: &cancellableSet)
@@ -79,7 +82,7 @@ class GoalsListViewModel {
 			setupPublishers()
 			fetchResults()
 		} else {
-			goalListStateSubject.send(.unauthorized)
+			goalListStateSubject.send(.failure(HealthKitError.notAuthorized))
 		}
 	}
 }

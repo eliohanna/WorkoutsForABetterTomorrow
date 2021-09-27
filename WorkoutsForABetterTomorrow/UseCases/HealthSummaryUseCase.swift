@@ -10,7 +10,7 @@ import HealthKitHelper
 import Combine
 
 protocol HealthSummaryUseCase {
-	var goalSummaryPublisher: AnyPublisher<GoalsListHealthSummary?, Error> { get }
+	var healthSummaryPublisher: AnyPublisher<GoalsListHealthSummary?, Error> { get }
 	func performFetch()
 }
 
@@ -22,7 +22,7 @@ class DefaultHealthSummaryUseCase {
 	private var walkingDistanceWorker: HealthKitWorker
 	private var runningDistanceWorker: HealthKitWorker
 	private var cancellableSet: Set<AnyCancellable> = Set()
-	private var goalSummarySubject = CurrentValueSubject<GoalsListHealthSummary?, Error>(nil)
+	private let healthSummarySubject = CurrentValueSubject<GoalsListHealthSummary?, Error>(nil)
 	
 	init() {
 		let endDate = Date()
@@ -44,13 +44,13 @@ class DefaultHealthSummaryUseCase {
 											  walkingDistance: walkingSummary.value,
 											  runningDistance: runningSummary.value)
 			})
-			.assign(to: goalSummarySubject)
+			.assign(to: healthSummarySubject)
 			.store(in: &cancellableSet)
 	}
 }
 
 extension DefaultHealthSummaryUseCase: HealthSummaryUseCase {
-	var goalSummaryPublisher: AnyPublisher<GoalsListHealthSummary?, Error> { goalSummarySubject.eraseToAnyPublisher() }
+	var healthSummaryPublisher: AnyPublisher<GoalsListHealthSummary?, Error> { healthSummarySubject.eraseToAnyPublisher() }
 	
 	func performFetch() {
 		stepWorker.performFetch()

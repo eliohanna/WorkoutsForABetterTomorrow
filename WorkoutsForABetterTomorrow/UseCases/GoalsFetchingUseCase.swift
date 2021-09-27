@@ -19,7 +19,7 @@ class DefaultGoalsFetchingUseCase {
 	// MARK: - private properties
 	private let goalsService: DefaultGoalsNetworkService
 	private let cache: CacheableGoalsUseCase
-	private let goalsSubject = PassthroughSubject<[Goal], Error>()
+	private let goalsSubject = CurrentValueSubject<[Goal], Error>([])
 	private var cancellableSet: Set<AnyCancellable> = Set()
 	
 	// MARK: - init

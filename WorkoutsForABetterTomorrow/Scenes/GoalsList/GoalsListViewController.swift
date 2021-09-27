@@ -65,8 +65,6 @@ class GoalsListViewController: UIViewController {
 	/// this will render the UI according to the current state, there was not enough time to handle all the cases
 	private func render(_ state: GoalsListState) {
 		switch state {
-		case .unauthorized:
-			break
 		case .loading:
 			// should show loading indicator as well
 			update(with: [], animate: true)

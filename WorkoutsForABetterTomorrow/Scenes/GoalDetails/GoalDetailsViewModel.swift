@@ -25,7 +25,7 @@ class GoalDetailsViewModel: ObservableObject {
 	
 	func setupPublishers() {
 		healthSummaryUseCase
-			.goalSummaryPublisher
+			.healthSummaryPublisher
 			.replaceError(with: nil)
 			.receive(on: DispatchQueue.main)
 			.assignNoRetain(to: \.healthSummary, on: self)

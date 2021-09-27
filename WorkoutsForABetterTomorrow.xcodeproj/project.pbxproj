@@ -12,7 +12,6 @@
 		19DC93B426FE3ACB0074CF39 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19DC93B226FE3ACB0074CF39 /* Main.storyboard */; };
 		19DC93B626FE3ACB0074CF39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19DC93B526FE3ACB0074CF39 /* Assets.xcassets */; };
 		19DC93B926FE3ACB0074CF39 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19DC93B726FE3ACB0074CF39 /* LaunchScreen.storyboard */; };
-		19DC93C426FE3ACB0074CF39 /* WorkoutsForABetterTomorrowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DC93C326FE3ACB0074CF39 /* WorkoutsForABetterTomorrowTests.swift */; };
 		19DC941E26FE3C090074CF39 /* HealthKitHelper in Frameworks */ = {isa = PBXBuildFile; productRef = 19DC941D26FE3C090074CF39 /* HealthKitHelper */; };
 		19DC942126FE3DF20074CF39 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19DC942026FE3DF20074CF39 /* HealthKit.framework */; };
 		19DC942E26FF8E380074CF39 /* Extension+UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DC942D26FF8E380074CF39 /* Extension+UITableViewCell.swift */; };
@@ -54,6 +53,12 @@
 		19DC948B2701077C0074CF39 /* CoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DC948A2701077C0074CF39 /* CoreDataService.swift */; };
 		19DC948E27010CD20074CF39 /* Extension+GoalEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DC948D27010CD20074CF39 /* Extension+GoalEntity.swift */; };
 		19DC949027010D870074CF39 /* Extension+RewardEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DC948F27010D870074CF39 /* Extension+RewardEntity.swift */; };
+		19DC949327011F5A0074CF39 /* GoalsListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DC949227011F5A0074CF39 /* GoalsListViewModelTests.swift */; };
+		19DC9496270120030074CF39 /* MockGoalsFetchingUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DC9495270120030074CF39 /* MockGoalsFetchingUseCase.swift */; };
+		19DC94982701212F0074CF39 /* MockHealthSummaryUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DC94972701212F0074CF39 /* MockHealthSummaryUseCase.swift */; };
+		19DC94A1270135C70074CF39 /* Extension+GoalsListHealthSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DC94A0270135C70074CF39 /* Extension+GoalsListHealthSummary.swift */; };
+		19DC94A32701360A0074CF39 /* Extension+Goal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DC94A22701360A0074CF39 /* Extension+Goal.swift */; };
+		19DC94A6270139940074CF39 /* GoalDetailsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DC94A5270139940074CF39 /* GoalDetailsViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,7 +80,6 @@
 		19DC93B826FE3ACB0074CF39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		19DC93BA26FE3ACB0074CF39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		19DC93BF26FE3ACB0074CF39 /* WorkoutsForABetterTomorrowTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WorkoutsForABetterTomorrowTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		19DC93C326FE3ACB0074CF39 /* WorkoutsForABetterTomorrowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutsForABetterTomorrowTests.swift; sourceTree = "<group>"; };
 		19DC93C526FE3ACB0074CF39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		19DC941726FE3BA30074CF39 /* HealthKitHelper */ = {isa = PBXFileReference; lastKnownFileType = folder; name = HealthKitHelper; path = ../HealthKitHelper; sourceTree = "<group>"; };
 		19DC941F26FE3DF20074CF39 /* WorkoutsForABetterTomorrow.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WorkoutsForABetterTomorrow.entitlements; sourceTree = "<group>"; };
@@ -119,6 +123,12 @@
 		19DC948A2701077C0074CF39 /* CoreDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataService.swift; sourceTree = "<group>"; };
 		19DC948D27010CD20074CF39 /* Extension+GoalEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+GoalEntity.swift"; sourceTree = "<group>"; };
 		19DC948F27010D870074CF39 /* Extension+RewardEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+RewardEntity.swift"; sourceTree = "<group>"; };
+		19DC949227011F5A0074CF39 /* GoalsListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsListViewModelTests.swift; sourceTree = "<group>"; };
+		19DC9495270120030074CF39 /* MockGoalsFetchingUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockGoalsFetchingUseCase.swift; sourceTree = "<group>"; };
+		19DC94972701212F0074CF39 /* MockHealthSummaryUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockHealthSummaryUseCase.swift; sourceTree = "<group>"; };
+		19DC94A0270135C70074CF39 /* Extension+GoalsListHealthSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+GoalsListHealthSummary.swift"; sourceTree = "<group>"; };
+		19DC94A22701360A0074CF39 /* Extension+Goal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Goal.swift"; sourceTree = "<group>"; };
+		19DC94A5270139940074CF39 /* GoalDetailsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalDetailsViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,7 +196,9 @@
 		19DC93C226FE3ACB0074CF39 /* WorkoutsForABetterTomorrowTests */ = {
 			isa = PBXGroup;
 			children = (
-				19DC93C326FE3ACB0074CF39 /* WorkoutsForABetterTomorrowTests.swift */,
+				19DC949427011FEF0074CF39 /* Mocks */,
+				19DC949127011F390074CF39 /* GoalsList */,
+				19DC94A4270139810074CF39 /* GoalDetails */,
 				19DC93C526FE3ACB0074CF39 /* Info.plist */,
 			);
 			path = WorkoutsForABetterTomorrowTests;
@@ -351,6 +363,41 @@
 			path = ModelExtensions;
 			sourceTree = "<group>";
 		};
+		19DC949127011F390074CF39 /* GoalsList */ = {
+			isa = PBXGroup;
+			children = (
+				19DC949227011F5A0074CF39 /* GoalsListViewModelTests.swift */,
+			);
+			path = GoalsList;
+			sourceTree = "<group>";
+		};
+		19DC949427011FEF0074CF39 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				19DC949F270135AA0074CF39 /* ModelExtensions */,
+				19DC94972701212F0074CF39 /* MockHealthSummaryUseCase.swift */,
+				19DC9495270120030074CF39 /* MockGoalsFetchingUseCase.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		19DC949F270135AA0074CF39 /* ModelExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				19DC94A0270135C70074CF39 /* Extension+GoalsListHealthSummary.swift */,
+				19DC94A22701360A0074CF39 /* Extension+Goal.swift */,
+			);
+			path = ModelExtensions;
+			sourceTree = "<group>";
+		};
+		19DC94A4270139810074CF39 /* GoalDetails */ = {
+			isa = PBXGroup;
+			children = (
+				19DC94A5270139940074CF39 /* GoalDetailsViewModelTests.swift */,
+			);
+			path = GoalDetails;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -406,6 +453,7 @@
 					};
 					19DC93BE26FE3ACB0074CF39 = {
 						CreatedOnToolsVersion = 12.5;
+						LastSwiftMigration = 1250;
 						TestTargetID = 19DC93A826FE3ACB0074CF39;
 					};
 				};
@@ -502,7 +550,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				19DC93C426FE3ACB0074CF39 /* WorkoutsForABetterTomorrowTests.swift in Sources */,
+				19DC94A6270139940074CF39 /* GoalDetailsViewModelTests.swift in Sources */,
+				19DC9496270120030074CF39 /* MockGoalsFetchingUseCase.swift in Sources */,
+				19DC94A32701360A0074CF39 /* Extension+Goal.swift in Sources */,
+				19DC949327011F5A0074CF39 /* GoalsListViewModelTests.swift in Sources */,
+				19DC94982701212F0074CF39 /* MockHealthSummaryUseCase.swift in Sources */,
+				19DC94A1270135C70074CF39 /* Extension+GoalsListHealthSummary.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -697,6 +750,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = WorkoutsForABetterTomorrowTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
@@ -707,6 +761,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ElioHanna.WorkoutsForABetterTomorrowTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WorkoutsForABetterTomorrow.app/WorkoutsForABetterTomorrow";
@@ -718,6 +773,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = WorkoutsForABetterTomorrowTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.5;

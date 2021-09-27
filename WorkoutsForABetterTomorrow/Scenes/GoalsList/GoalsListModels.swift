@@ -9,7 +9,6 @@ import Foundation
 import Combine
 
 enum GoalsListState {
-	case unauthorized
 	case loading
 	case success(goals: [GoalViewModel])
 	case noResults
