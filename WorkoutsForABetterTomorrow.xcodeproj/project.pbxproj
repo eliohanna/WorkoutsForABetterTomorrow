@@ -81,7 +81,7 @@
 		19DC93BA26FE3ACB0074CF39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		19DC93BF26FE3ACB0074CF39 /* WorkoutsForABetterTomorrowTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WorkoutsForABetterTomorrowTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		19DC93C526FE3ACB0074CF39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		19DC941726FE3BA30074CF39 /* HealthKitHelper */ = {isa = PBXFileReference; lastKnownFileType = folder; name = HealthKitHelper; path = ../HealthKitHelper; sourceTree = "<group>"; };
+		19DC941726FE3BA30074CF39 /* HealthKitHelper */ = {isa = PBXFileReference; lastKnownFileType = folder; path = HealthKitHelper; sourceTree = "<group>"; };
 		19DC941F26FE3DF20074CF39 /* WorkoutsForABetterTomorrow.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WorkoutsForABetterTomorrow.entitlements; sourceTree = "<group>"; };
 		19DC942026FE3DF20074CF39 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		19DC942D26FF8E380074CF39 /* Extension+UITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UITableViewCell.swift"; sourceTree = "<group>"; };
